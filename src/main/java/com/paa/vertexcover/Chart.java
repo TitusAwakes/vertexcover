@@ -16,8 +16,8 @@ public class Chart extends ApplicationFrame {
        super( applicationTitle );        
        JFreeChart barChart = ChartFactory.createBarChart(
           chartTitle,           
-          "Tempo",            
           "Num Nós",            
+          "Grafos",            
           dataset,         
           PlotOrientation.VERTICAL,           
           true, true, false);
