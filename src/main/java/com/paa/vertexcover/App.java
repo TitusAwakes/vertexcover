@@ -13,7 +13,6 @@ public class App
         VCBruteForce vc = new VCBruteForce();
 
         // Teste 1
-        start = System.currentTimeMillis();
         Graph graph = new Graph();
         graph.AddNewNode(1);
         graph.AddNewNode(2);
@@ -27,13 +26,13 @@ public class App
         graph.AddNewEdge(3, 4);
         
         System.out.println("Teste 1: ");
+        start = System.currentTimeMillis();
         for(Node node: vc.MinimumVertexCover(graph)){
             System.out.println(node.Id);
         }
         chart.addValueToDataset(System.currentTimeMillis() - start, "Grafo 1");
 
         // Teste 2
-        start = System.currentTimeMillis();
         graph = new Graph();
         graph.AddNewNode(1);
         graph.AddNewNode(2);
@@ -55,13 +54,13 @@ public class App
         graph.AddNewEdge(5, 7);
         
         System.out.println("Teste 2: ");
+        start = System.currentTimeMillis();
         for(Node node: vc.MinimumVertexCover(graph)){
             System.out.println(node.Id);
         }
         chart.addValueToDataset(System.currentTimeMillis() - start, "Grafo 2");
 
         // Teste 3
-        start = System.currentTimeMillis();
         graph = new Graph();
         graph.AddNewNode(0);
         graph.AddNewNode(1);
@@ -77,6 +76,7 @@ public class App
         graph.AddNewEdge(1, 4);
         
         System.out.println("Teste 3: ");
+        start = System.currentTimeMillis();
         for(Node node: vc.MinimumVertexCover(graph)){
             System.out.println(node.Id);
         }
