@@ -17,8 +17,8 @@ public class VCBruteForce {
 
     static void ClearMarkedFlags(Graph graph){
         // Itera sobre todos os nós do grafo, os marcando como ainda não visitados
-        for (Node n: graph.NodeObjList){
-            n.marked = false;
+        for (Edge e: graph.Edges){
+            e.Marked = false;
         }
     }
 
@@ -36,17 +36,16 @@ public class VCBruteForce {
             // Itera sobre todas as combinações.  
             for (List<Node> combination: combinations){
                 for (Node node : combination){
-                    // Itera pela lista de arestas daquele nó específico e marca todos os nós, incluindo ele próprio
-                    node.marked = true;
-                    for (Node connectedNode : node.Edges){
-                            connectedNode.marked = true; // Marca o nó
+                    // Itera pela lista de arestas daquele nó específico e as marca
+                    for (Edge connectedEdge : node.Edges){
+                            connectedEdge.Marked = true; // Marca o nó
                         }
                     } 
                 boolean solution = true;
-                // Ao fim de testar uma combinação, checar se ela cobre todo o vértice, que se caracteriza em checar se todos os nós estão marcados
-                for(Node node : graph.NodeObjList){
-                // Se existe pelo menos um nó que não está marcado, sabemos que aquela não é uma solução   
-                        if (!node.marked){
+                // Ao fim de testar uma combinação, checar se ela cobre todas as arestas, que se caracteriza em checar se todos elas estão marcadas
+                for(Edge edge : graph.Edges){
+                // Se existe pelo menos uma aresta que não está marcada, sabemos que aquela não é uma solução   
+                        if (!edge.Marked){
                             solution = false;
                             break;
                         }

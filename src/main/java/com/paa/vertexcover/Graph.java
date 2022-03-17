@@ -4,18 +4,16 @@ import java.util.LinkedList;
 import java.util.Properties;
 
 public class Graph {
-    // public LinkedList<Integer> Nodes;
     public LinkedList<Node> NodeObjList;
-    // public LinkedList<Edge> Edges;
+    public LinkedList<Edge> Edges;
 
     public Graph(){
         // this.Nodes = new LinkedList<Integer>();
-        // this.Edges = new LinkedList<Edge>();
+        this.Edges = new LinkedList<Edge>();
         this.NodeObjList = new LinkedList<Node>();
     }
 
     public void AddNewNode(int newNode){
-
         Node newNodeObj = new Node(newNode);
         NodeObjList.add(newNodeObj);
     }
@@ -32,8 +30,11 @@ public class Graph {
           }
        }
 
-       nodeObj1.Edges.add(nodeObj2);
-       nodeObj2.Edges.add(nodeObj1);
+       Edge newEdge = new Edge(this.Edges.size() ,nodeObj1, nodeObj2);
+       this.Edges.add(newEdge);
+
+       nodeObj1.Edges.add(newEdge);
+       nodeObj2.Edges.add(newEdge);
     }
 }
 
