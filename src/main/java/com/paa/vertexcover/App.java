@@ -349,7 +349,7 @@ public class App
         for(Node node: result){
             System.out.println(node.Id);
         }
-        chart.addValueToDataset(System.currentTimeMillis() - start, "Grafo 10");
+        chart.addValueToDataset(System.currentTimeMillis() - start, "14 Vértices");
 
         // Teste 14.png - 15 Nós
         graph = new Graph();
@@ -396,7 +396,7 @@ public class App
         for(Node node: result){
             System.out.println(node.Id);
         }
-        chart.addValueToDataset(System.currentTimeMillis() - start, "Grafo 11");
+        chart.addValueToDataset(System.currentTimeMillis() - start, "15 Vértices");
     
         chart.pack( );              
         chart.setVisible( true );
