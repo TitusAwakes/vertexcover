@@ -9,12 +9,14 @@ import java.util.List;
  */
 public class App 
 {
+
+
     public static void main( String[] args )
     {
         long start;
         Chart chart = new Chart("Tempo de Execução", "");
-        VCBruteForce vc = new VCBruteForce();
-
+        VCDinamico vc = new VCDinamico();
+       
         // Teste 1 - 5 Nós
         Graph graph = new Graph();
         graph.AddNewNode(1);
