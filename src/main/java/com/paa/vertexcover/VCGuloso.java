@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class VCDinamico {   
+public class VCGuloso {   
 
     public List<Node> MinimumVertexCover(Graph graph){
         

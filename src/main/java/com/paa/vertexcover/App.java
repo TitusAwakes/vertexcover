@@ -15,7 +15,7 @@ public class App
     {
         long start;
         Chart chart = new Chart("Tempo de Execução", "");
-        VCDinamico vc = new VCDinamico();
+        VCGuloso vc = new VCGuloso();
        
         // Teste 1 - 5 Nós
         Graph graph = new Graph();
