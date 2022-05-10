@@ -7,9 +7,11 @@ public class Node {
 
     public Node(int nodeId){
         this.Id = nodeId;
+        
     }
 
-    LinkedList<Edge> Edges = new LinkedList<Edge>();
-
+    public LinkedList<Edge> Edges = new LinkedList<Edge>();
+    public boolean Marked=false;
     public int Id;
+    
 }

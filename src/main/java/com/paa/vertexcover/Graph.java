@@ -1,7 +1,7 @@
 package com.paa.vertexcover;
 
 import java.util.LinkedList;
-import java.util.Properties;
+
 
 public class Graph {
     public LinkedList<Node> NodeObjList;
@@ -35,6 +35,10 @@ public class Graph {
 
        nodeObj1.Edges.add(newEdge);
        nodeObj2.Edges.add(newEdge);
+    }
+
+    public int size(){
+        return NodeObjList.size();
     }
 }
 
